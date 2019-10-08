@@ -1,0 +1,74 @@
+{% extends "homebase.html" %}
+
+{% block title %} {{ product.title }} {% endblock %}
+{% block keywords %} {{ product.keywords }} {% endblock %}
+{% block description %} {{ product.description }} {% endblock %}
+
+{% block sidebar %} {% include "usermenu.html" %} {% endblock %}
+{% block content   %}
+
+    <div class="w3l_banner_nav_right">
+        <div class="privacy about">
+            <div class="w3l_banner_nav_right">
+                <div class="agileinfo_single">
+                    <h5>{{ product.title }}</h5>
+                    <div class="well well-small">
+                        <div class="row-fluid">
+                            <div class="span15">
+                                <div id="myCarousel" class="carousel slide cntr">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"> <img src="{{ product.image.url }}" alt="" style="width:100%"></a>
+                                        </div>
+                                        {% for rs in productimage %}
+                                            <div class="item ">
+                                                <a href="#"> <img src="{{ rs.image.url }}" alt="" style="width:100%"></a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+                        {% endfor %}
+
+                    {% endif %}
+                    <div class="col-md-8 agileinfo_mail_grid_right">
+                        <form  action="/order/addtocart/{{ product.id }}"  method="post" >
+                            {% csrf_token %}
+                            <label>kaç adet</label>
+                            <input type="number" name="quantity" value="1" height="2" width="1">
+                            <input type="submit" value="send form" height="2" width="2">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix">
+
+    </div>
+    </div>
+
+    </div>
+    <!-- //about -->
+    </div>
+    <div class="clearfix">
+
+    </div>
+    </div>
+    <!-- //banner -->
+    <!-- team -->
+
+{% endblock %}

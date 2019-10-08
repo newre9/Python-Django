@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b35fa8a-7630-420a-b684-8924a3ce2982" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1OeNwbnS4ZwSLTBFO3QyUE2bMAf" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/product/templates" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\django\yazproje\polls\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\django\yazproje\product\templates" />
+      <recent name="C:\django\yazproje\order\templates" />
+      <recent name="C:\django\yazproje\order" />
+      <recent name="C:\django\yazproje\product" />
+      <recent name="C:\django\yazproje\polls\templates\polls" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="yazproje" type="Python.DjangoServer" factoryName="Django server">
+      <module name="yazproje" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="yazproje.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b35fa8a-7630-420a-b684-8924a3ce2982" name="Default Changelist" comment="" />
+      <created>1564334341312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564334341312</updated>
+      <workItem from="1564334374781" duration="795000" />
+      <workItem from="1564388699383" duration="7102000" />
+      <workItem from="1564540804217" duration="4296000" />
+      <workItem from="1565168262645" duration="2070000" />
+      <workItem from="1565789576257" duration="6552000" />
+      <workItem from="1565888129929" duration="3982000" />
+      <workItem from="1565973943713" duration="8215000" />
+      <workItem from="1566066119442" duration="2924000" />
+      <workItem from="1566189409768" duration="5573000" />
+      <workItem from="1566313859276" duration="2805000" />
+      <workItem from="1566392540309" duration="3878000" />
+      <workItem from="1566445906935" duration="14261000" />
+      <workItem from="1566548293937" duration="7482000" />
+      <workItem from="1566617685557" duration="20716000" />
+      <workItem from="1566659762608" duration="5767000" />
+      <workItem from="1566704073875" duration="6950000" />
+      <workItem from="1566723940037" duration="11958000" />
+      <workItem from="1566749342092" duration="5409000" />
+      <workItem from="1566792079806" duration="3822000" />
+      <workItem from="1566841193118" duration="5790000" />
+      <workItem from="1566894786934" duration="12282000" />
+      <workItem from="1566974701429" duration="56000" />
+      <workItem from="1566975486697" duration="923000" />
+      <workItem from="1566977745773" duration="1217000" />
+      <workItem from="1566992189480" duration="744000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

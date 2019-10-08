@@ -1,0 +1,75 @@
+{% extends "homebase.html" %}
+
+{% block title %} {{ product.title }} {% endblock %}
+{% block keywords %} {{ product.keywords }} {% endblock %}
+{% block description %} {{ product.description }} {% endblock %}
+
+{% block sidebar %} {% include "sidebar.html" %} {% endblock %}
+{% block content   %}
+
+    <div class="w3l_banner_nav_right">
+        <!-- about -->
+        <div class="privacy about">
+
+            <div class="w3l_banner_nav_right">
+
+                <div class="agileinfo_single">
+                    <h5>{{ product.title }}</h5>
+
+                    <div class="well well-small">
+                        <div class="row-fluid">
+                            <div class="span5">
+
+                                {% if messages %}
+                                    {% for message in messages %}
+                                        <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+                                    {% endfor %}
+
+                                {% endif %}
+                                <div id="myCarousel" class="carousel slide cntr">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <a href="#"> <img src="{{ product.image.url }}" alt="" style="width:100%"></a>
+                                        </div>
+                                        {% for rs in productimage %}
+                                            <div class="item ">
+                                                <a href="#"> <img src="{{ rs.image.url }}" alt="" style="width:100%"></a>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                                </div>
+                            </div>
+                            <div class="product-btns">
+                                <form action="/order/addtocart/{{ products.id }}"  method="post">
+                                    {% csrf_token %}
+                                    <div class="qty-input">
+                                    {{ form.as_p }}
+                                        </div>
+                                    <input type="submit"  class="primary-btn add-to-cart " value="send form">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix">
+
+    </div>
+    </div>
+
+    </div>
+    <!-- //about -->
+    </div>
+    <div class="clearfix">
+
+    </div>
+    </div>
+    <!-- //banner -->
+    <!-- team -->
+
+{% endblock %}

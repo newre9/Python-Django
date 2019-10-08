@@ -1,0 +1,75 @@
+{% extends "homebase.html" %}
+
+{% block title %} shop cart  {% endblock %}
+
+{% block sidebar %} {% include "usermenu.html" %} {% endblock %}
+
+{% block content   %}
+
+
+<div class="w3l_banner_nav_right">
+    <!-- about -->
+    <div class="privacy about">
+    <h1>Orders index</h1>
+{% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+                {% endfor %}
+
+            {% endif %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Userid</th>
+                <th>Amount</th>
+                <th>Name</th>
+                <th>Adres</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Note</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.user }}</td>
+                <td>{{ order.total }}</td>
+                <td>{{ order.name }}</td>
+                <td>{{ order.address }}</td>
+                <td>{{ order.city }}</td>
+                <td>{{ order.phone }}</td>
+                <td>{{ order.status }}</td>
+                <td>{{ order.note }}</td>
+
+                <td>
+                    <a href="/order/detail/{{ order.id }}"class="btn btn-block btn-warning btn-xs">show</a>
+
+                </td>
+
+            </tr>
+
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    </div>
+    <!-- //about -->
+</div>
+    <div class="clearfix"></div>
+    </div>
+    <!-- //banner -->
+    <!-- team -->
+
+{% endblock %}
+
+
+
+
+

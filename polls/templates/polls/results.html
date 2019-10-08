@@ -1,0 +1,35 @@
+{% extends "homebase.html" %}
+
+{% block title %} anket  sayfası{% endblock %}
+
+
+{% block content %}
+
+    <div class="w3l_banner_nav_right">
+        <!-- about -->
+        <div class="privacy about">
+            <h3>Anket Sonucu</h3>
+
+            <div class="agile_about_grids">
+
+                <div class="col-md-6 agile_about_grid_left">
+
+                    <h1>{{ question.question_text }}</h1>
+
+                    <ul>
+                        {% for choice in question.choice_set.all %}
+                            <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+                        {% endfor %}
+                    </ul>
+
+                    <a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}

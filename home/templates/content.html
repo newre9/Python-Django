@@ -1,0 +1,46 @@
+
+
+{% load static %}
+
+<!-- top-brands -->
+	<div class="top-brands">
+		<div class="container">
+			<h3>Yeni Ürünler</h3>
+			<div class="agile_top_brands_grids">
+                {% for rs in content %}
+				<div class="col-md-3 top_brand_left">
+					<div class="hover14 column">
+						<div class="agile_top_brand_left_grid">
+							<div class="tag"><img src="{% static 'images/tag.png '%}" alt=" " class="img-responsive" /></div>
+							<div class="agile_top_brand_left_grid1">
+								<figure>
+									<div class="snipcart-item block" >
+										<div class="snipcart-thumb">
+											<a href="/product/{{ rs.id }}"><img title=" " alt=" " src="{{ rs.image.url }}" height="100" width="100"/></a>
+											<p>{{rs.title}}</p>
+											<h4>{{rs.price}} TL</h4>
+										</div>
+										<div class="product-btns">
+
+                            </div>
+									</div>
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //fresh-vegetables -->

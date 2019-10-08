@@ -1,0 +1,40 @@
+
+{% load static %}
+
+    <section class="slider">
+        <div class="flexslider">
+            <ul class="slides">
+                {% for rs in products %}
+                    <li>
+                        <div >
+                            <img src="{{ rs.image.url }}"height="600" width="200">
+
+                            <div class="more">
+                                <h3> <span>{{ rs.title }}</span> </h3>
+                                <a href="/product/{{ rs.id }}" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+                            </div>
+                        </div>
+                    </li>
+
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <!-- flexSlider -->
+    <link rel="stylesheet" href="{% static 'css/flexslider.css'%}" type="text/css" media="screen" property="" />
+    <script defer src="{% static 'js/jquery.flexslider.js'%}"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider){
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!-- //flexSlider -->
+</div>
+<div class="clearfix"></div>
+</div>
+<!-- banner -->

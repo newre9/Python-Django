@@ -1,0 +1,34 @@
+{% extends "homebase.html" %}
+
+{% block title %} index sayfası{% endblock %}
+
+
+{% block content %}
+
+    <div class="w3l_banner_nav_right">
+        <!-- about -->
+        <div class="privacy about">
+            <h3>Anket</h3>
+
+            <div class="agile_about_grids">
+
+                <div class="col-md-6 agile_about_grid_left">
+                    {% if latest_question_list %}
+                        <ul>
+                            {% for question in latest_question_list %}
+                                <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No polls are available.</p>
+                    {% endif %}
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+
+
+
+
+{% endblock %}

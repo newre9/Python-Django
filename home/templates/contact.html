@@ -1,0 +1,28 @@
+{% extends "homebase.html" %}
+{% load static %}
+{% block title %} iletşim {% endblock %}
+
+
+{% block content %}
+   <div class="mail">
+        <h3>Bizimle iletişime geçin  </h3>
+
+        <div class="agileinfo_mail_grids">
+
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">{{ message }}</div>
+                {% endfor %}
+
+            {% endif %}
+            <div class="col-md-8 agileinfo_mail_grid_right">
+                <form action="/contact"  method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="send form">
+                </form>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+{% endblock %}

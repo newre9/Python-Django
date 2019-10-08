@@ -1,0 +1,14 @@
+{% extends "homebase.html" %}
+
+{% block title %} shop cart  {% endblock %}
+
+{% block sidebar %} {% include "usermenu.html" %} {% endblock %}
+
+{% block content   %}
+    {% if user.id is not None %}
+        <li> {{user.username}} </li>
+
+
+    {% endif %}
+
+{% endblock %}

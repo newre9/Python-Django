@@ -1,0 +1,45 @@
+
+{% extends "homebase.html" %}
+{% load static %}
+{% block title %} Anket Detay{% endblock %}
+
+
+{% block content %}
+
+    <div class="w3l_banner_nav_right">
+        <!-- about -->
+        <div class="privacy about">
+            <h3>About Us</h3>
+
+            <div class="agile_about_grids">
+                <div class="col-md-6 agile_about_grid_right">
+                    <img src="images/31.jpg" alt=" " class="img-responsive" />
+                </div>
+                <div class="col-md-6 agile_about_grid_left">
+
+
+                    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+
+
+                    <h1>{{ question.question_text }}</h1>
+
+                    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+                    <form action="{% url 'polls:vote' question.id %}" method="post">
+                        {% csrf_token %}
+                        {% for choice in question.choice_set.all %}
+                            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+                        {% endfor %}
+                        <input type="submit" value="Vote">
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
